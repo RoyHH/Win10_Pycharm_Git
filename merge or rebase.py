@@ -8,5 +8,13 @@
 2.2 下拉github上的指定commit
 2.3 上传操作怎么做最好，最清晰
 
+
+
+操作：
+本地建第一个commit；git add . && git commit -m"本地第一个commit"
+
+
+
+
 附加：
 对IDEA中Terminal中的git log显示中文异常问题做了处理

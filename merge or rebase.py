@@ -13,6 +13,7 @@
 操作：
 本地建第一个commit；git add . && git commit -m"本地第一个commit"
 本地建第二个commit；git add . && git commit -m"本地第二个commit"
+本地建第三个commit；git add . && git commit -m"本地第三个commit"
 
 
 

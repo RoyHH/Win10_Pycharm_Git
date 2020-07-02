@@ -7,3 +7,6 @@
 2.1 本地保留全部，上传指定commit
 2.2 下拉github上的指定commit
 2.3 上传操作怎么做最好，最清晰
+
+附加：
+对IDEA中Terminal中的git log显示中文异常问题做了处理

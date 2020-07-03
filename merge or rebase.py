@@ -75,3 +75,4 @@ pull下来的是之前royhh在本地新建分支royhh以及原来master主线的
 并且切换到自己的分支上;git checkout linux—royhh
 
 在本地linux建第一个commit；git add . && git commit -m"本地linux建第一个commit"
+在本地linux建第二个commit；git add . && git commit -m"本地linux建第二个commit"

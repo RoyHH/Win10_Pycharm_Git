@@ -71,4 +71,4 @@ commit删除
 这个分支 royhh的起始位置是根据head当前位置而定的，不过刚新建分支时，head指向的还是master或者之前指向的分支，所以这个时候，需要把head指向royhh，才能在royhh分支上做事情；git checkout royhh
 
 本地royhh分支建第一个commit；git add . && git commit -m"本地royhh分支第一个commit"
-
+本地royhh分支建第二个commit；git add . && git commit -m"本地royhh分支第二个commit"

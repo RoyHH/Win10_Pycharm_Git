@@ -40,9 +40,27 @@ tag删除：
 
 commit删除
 现在想要删除某个commit，比如删除第四个commit，首先在本地删除第四个commit（注意：这个操作要求，最近一次commit后，不许再有任何内容改变，否则需要再新建一个commit，然后再做这个操作）；git rebase --onto master~5 master~4 master
+        ps：
+        肯定会有冲突，冲突原因是，每次创建的commit是在上一个commit的基础上创建的，也就是说，commit 2 =commit 1 + change（from commit 1 to commit 2）。
+        这样就不难理解了，加入log列表是 1-2-3-4-5-6，如果想要删除4和5，肯定会影响到6，因为6是在5的基础上创建的，删除5的话，6就相当于是3 + change（from 5 to 6），这种肯定不是我们想要的，所以会提示冲突，然后手动改内容。
 
+手动更改冲突，把想要留存的保留下来，然后输入命令保存更改；git add .
+输入命令；git rebase --continue
+完成
+        ps：
+        这是可以看到，删除成功了，列表也是我们想要的了；git log --oneline --graph
+        但是，如果看全部log列表，会发现，还是可以看到之前的所有log，只是不显示；git log --oneline --all --graph
+        这是因为git有个很好的机制，后悔机制，也就是说删除错了没有关系，可以reset回原来的列表，一切重来；在version control中可以操作
+        或者在所有列表中找到你想回溯到的ID，做reset；
+                                                    git reset --hard <commit_id>  # 回到其中你想要的某个版
+                                                    或者
+                                                    git reset --hard HEAD^  # 回到最新的一次提交
+                                                    或者
+                                                    git reset HEAD^  # 此时代码保留，回到 git add 之前
 
-
+最后一步，本地改完了，其实还没有结束，你需要把删除后的commit列表log，上传到github，不然以后git pull时，旧的commit log还会回来，很乱
+那么就需要做强制上传；git push origin HEAD --force
+完成
 
 
 附加：

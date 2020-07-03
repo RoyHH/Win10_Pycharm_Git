@@ -73,3 +73,5 @@ pull下来的是之前royhh在本地新建分支royhh以及原来master主线的
 如果想在royhh分支，即别人的分支上做修改，那么需要将head切换到royhh分支上，再做常规操作;git checkout royhh
 如果不是上述情况，则在master上修改，那就新建立自己分支做事情，即建一个分支linux—royhh;git branch linux—royhh
 并且切换到自己的分支上;git checkout linux—royhh
+
+在本地linux建第一个commit；git add . && git commit -m"本地linux建第一个commit"

@@ -65,3 +65,7 @@ commit删除
 
 附加：
 对IDEA中Terminal中的git log显示中文异常问题做了处理
+
+多人协作：
+现在，完成了多人各自新建分支，做自己的事情，接下来，回切到master，来做事情
+本地master建第10个commit；git add . && git commit -m"本地master第10个commit"
